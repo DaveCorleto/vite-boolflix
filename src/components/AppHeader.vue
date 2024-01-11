@@ -1,5 +1,5 @@
 <script>
-// import axios from 'axios';
+import axios from 'axios';
 import { store } from '../store';
 export default {
     name: "AppHeader",
@@ -15,7 +15,16 @@ export default {
 
 <template>
     <header>
-        <div>Sono AppHeader</div>
+        <div class="logo">
+            <h1>BOOLFLIX</h1>
+        </div>
+        <div class="input-group">
+            <input type="search" class="form-control rounded" placeholder="Search title" aria-label="Search"
+                aria-describedby="search-addon" />
+            <button type="button" class="btn btn-outline-primary" data-mdb-ripple-init>
+                SEARCH
+            </button>
+        </div>
     </header>
 </template>
 
@@ -23,5 +32,24 @@ export default {
 header {
     height: 80px;
     border: 2px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    .logo {
+        color: red;
+    }
+
+    .form-control {
+        margin-right: 15px;
+    }
+
+    .btn-outline-primary {
+        background-color: red;
+        padding: 4px;
+        border-radius: 5px;
+    }
 }
 </style>

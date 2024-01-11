@@ -1,5 +1,5 @@
 <script>
-// import axios from 'axios';
+import axios from 'axios';
 // Importo lo Store! 
 import { store } from '../store';
 export default {

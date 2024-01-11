@@ -4,8 +4,6 @@ import AppHeader from './components/AppHeader.vue';
 
 
 
-// createApp(App).mount('#app');
+createApp(App).mount('#app');
 
-const app = createApp(App);
 
-app.mount('#app');

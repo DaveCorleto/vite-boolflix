@@ -2,6 +2,7 @@
 import AppHeader from './components/AppHeader.vue';
 import AppCardMovies from './components/AppCardMovies.vue';
 import AppCardTvSeries from './components/AppCardTvSeries.vue';
+import AppMain from './components/AppMain.vue'
 import axios from 'axios';
 import { store } from './store';
 
@@ -41,9 +42,4 @@ export default {
 <style lang="scss">
 @use '../src/styles/general.scss' as *;
 @use '../src/styles/mixins.scss' as *;
-
-.container {
-  width: 100%;
-  background-color: red;
-}
 </style>
