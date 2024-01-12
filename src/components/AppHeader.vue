@@ -7,10 +7,23 @@ export default {
     data() {
         return {
             store,
+            // UserSearch: 'ritorno al futuro',
         }
     },
     methods: {
+        getcallTMDBMovies() {
+            axios
+                .get(myUrlMovies)
+                .then((res => {
+                    console.log(res.data);
+                }))
 
+                .catch((err) => {
+                    console.log("Errori", err)
+                }
+                )
+
+        }
     }
 
 }
