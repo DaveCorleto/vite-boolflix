@@ -4,27 +4,14 @@ import { store } from '../store';
 
 export default {
     name: "AppHeader",
+    // dichiaro l'emit 
+    emits: ['ricercautente'],
     data() {
         return {
             store,
-            // UserSearch: 'ritorno al futuro',
         }
     },
-    methods: {
-        getcallTMDBMovies() {
-            axios
-                .get(myUrlMovies)
-                .then((res => {
-                    console.log(res.data);
-                }))
 
-                .catch((err) => {
-                    console.log("Errori", err)
-                }
-                )
-
-        }
-    }
 
 }
 
@@ -38,8 +25,8 @@ export default {
         </div>
         <div class="input-group">
             <input type="search" class="form-control rounded" placeholder="Search title" aria-label="Search"
-                aria-describedby="search-addon" v-model="store.UserSearch" />
-            <button type="button" class="btn btn-outline-primary" data-mdb-ripple-init>
+                aria-describedby="search-addon" v-model="store.UserSearch" @change.prevent="$emit('ricercautente')" />
+            <button type=" button" class="btn btn-outline-primary" data-mdb-ripple-init>
                 SEARCH
             </button>
         </div>
