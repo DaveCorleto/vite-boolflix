@@ -34,7 +34,7 @@ export default {
         .get(myUrlMovies)
         .then((res => {
           console.log("Questo è l'elenco dei film che mi ritorna da myUrlMovies", res.data);
-          storeMovies = res.data;
+          store.Movies = res.data.results;
         }))
 
         .catch((err) => {
